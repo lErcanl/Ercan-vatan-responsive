@@ -40,13 +40,21 @@ new Swiper(".mySwiper", {
     
   
   //click event shopping
-  var clicks = 0;
+  var clicks;
+  if(localStorage.getItem("counter")){
+    document.getElementById("clicks").innerHTML =localStorage.getItem("counter");
 
+    clicks=parseInt(localStorage.getItem("counter"))
+  }
+  else{
+    clicks=0;
+  }
   function onClick() {
     clicks += 1;
-    document.getElementById("clicks").innerHTML = clicks;
+    localStorage.setItem("counter", clicks);
+    document.getElementById("clicks").innerHTML =localStorage.getItem("counter");
   };
-  
+
 
 
 
@@ -62,11 +70,11 @@ function ajaxCall(fetching,id){
     const html = data.map(product=>{
       relatedShipping=product.samedayshipping;
       if  (relatedShipping) {
-         text="Bugün Kargoda";
+         text="BUGUN KARGODA";
       }   
 
       else{
-        text="Bugün Kargoya Verilemez"
+        text="BUGUN KARGOYA VERILEMEZ"
       }
       return ` 
               <div class="product">
@@ -80,12 +88,12 @@ function ajaxCall(fetching,id){
               <p class="ml-5">${product.rating}</p>
               </div>
 
-              <p class="comment__heading" >(${product.comment} Yorum)</p>
+              <p class="product__comment" >(${product.comment} Yorum)</p>
               </div>
-              <p class="code__heading">${product.code}</p>
+              <p class="product__code">${product.code}</p>
 
               <p class="product__title">${product.title}</p>
-              <p  class="price__heading"> ${product.price} ${product.cur}</p>
+              <p class="product__price"> ${product.price} ${product.cur}</p>
             
               <p class="product__cargo" id="shipping">${text}</p>
               <div class="basket__btn__container">
@@ -109,4 +117,23 @@ function ajaxCall(fetching,id){
   })
 
 
+}
+
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.querySelector(".header__container");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }

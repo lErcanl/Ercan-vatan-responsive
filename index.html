@@ -13,17 +13,17 @@
 </head>
 <body>    
     <div class="header__swipe">
-
-  <div class=header>
-                <div class="header__container" style="display:flex;" >
+              
+            
+                <div class="header__container" id="mySticky">
                   <a href="/">            
-                      <img src="./images/vatan.png"  width="80" alt="Vatan Computer">
+                      <img src="./images/vatan.png"  width="50" alt="Vatan Computer">
                     </a>
                       <div class="header__categorie">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                           </svg>
-                        <p>Katerigoriler</p>
+                        <p class="header__categorie__heading fw-bold">Kategoriler</p>
                       </div>
                       <div class="header__searchbar">
                      <input type="text">
@@ -37,7 +37,7 @@
                     </div>
                      <div class="header__person">
                        <ul>
-                         <li><a href=""><span class="header__person__heading">Uyelik</span></a></li>
+                         <li><a href=""><span class="header__person__heading fw-bold">Uyelik</span></a></li>
                         </ul>
                          <img src="./images/man.png" width="20" alt="person">
 
@@ -46,14 +46,13 @@
                             <img src="./images/shopping_cart.svg" width="20" alt="shopping">
                             <ul>
                               <li>
-                              <a href=""><span class="header__shopping__heading">Sepetim</span><span class="header__shopping__counter" id="clicks">0</span></a>
+                              <a href=""><span class="header__shopping__heading fw-bold">Sepetim</span><span class="header__shopping__counter" id="clicks">0</span></a>
                             </li>
                           </ul>
                      </div>
                   
                 </div>
-
-            </div>
+              </div>
 
             <!-- Slider main container -->
             <div style="position:relative;">
@@ -66,7 +65,7 @@
                       <img src="/images/gelecek.png" width="100%" alt="feature">
   
                     </div>
-                    <div style="height:100%;" class="swiper-slide swiper-slide--first-img" >
+                    <div class="swiper-slide swiper-slide--first-img" >
 
                       <img src="/images/sony.png
                       "
@@ -116,17 +115,17 @@
             </div>
           </div>      
 
-            <main style="width:80%; margin:0 auto; ">
-              <div class="main__title">
-              <h1 style="color:#525252; padding-top:10px;">Öne Çıkan Ürünler</h1>
-              <a href="#" style="text-decoration:none; text-transform:uppercase; font-weight: bold; font-size:13px; align-self:flex-end; color:#436c9e">Tüm Öne Çıkanlar 	&rarr;</a>
+            <main class="content">
+              <div class="content__title">
+              <h1>Öne Çıkan Ürünler</h1>
+              <a  href="#">Tüm Öne Çıkanlar &rarr;</a>
             </div>
 <div id="related">
 
 </div>  
-<div class="main__title">
-  <h1 style="color:#525252; padding-top:10px;">Çok Satan Ürünler</h1>
-  <a href="#" style="text-decoration:none; text-transform:uppercase; font-weight: bold; font-size:13px; align-self:flex-end; color:#436c9e; padding-top:5px;">Tüm Çok Satanlar 	&rarr;</a>
+<div class="content__title">
+  <h1>Çok Satan Ürünler</h1>
+  <a href="#">Tüm Çok Satanlar &rarr;</a>
 </div>
 <div id="seller">
 
@@ -138,7 +137,7 @@
           <h1>KURUMSAL</h1>
 
       <div class="footer__element__container order--1">
-        <div  class="footer__elements" style="padding-right:40px;">
+        <div  class="footer__elements pr-40">
             <ul>
               <li><a href="">Hakkımızda</a></li>
               <li><a href="">Müşteri Hizmetleri</a></li>
@@ -170,7 +169,7 @@
   <h1>KATEGORİLER</h1>
 
 <div class="footer__element__container">
-<div class="footer__elements" style="padding-right:40px;">
+<div class="footer__elements pr-40 mb-20">
   <ul>
     <li><a href="">Bilgisayar</a></li>
     <li><a href="">Cep Telefonu</a></li>
@@ -221,10 +220,10 @@
       <div class="footerLast"></div>
       <div class="footerLast__container">
       <div class="footerLast__heading">
-          <p style="font-weight: bold;">Türkiye'nin Teknoloji Hiperstoru</p>
+          <p class="fw-bold">Türkiye'nin Teknoloji Hiperstoru</p>
           <p>Copyright 2016 Vatan Bilgisayar San. ve Tic. A.Ş.</p>
       </div>
-      <div style="display: flex; align-items: center;">
+      <div class="footerLast__images">
           <img width="100" src="./images/express.jpeg" alt="express">
           <img width="100" src="./images/master.png" alt="master-visa">
           <img width="100" src="./images/norton.jpg" alt="norton">
