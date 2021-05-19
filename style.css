@@ -225,10 +225,12 @@ display:flex; justify-content: space-between; padding:25px 0;
 .content__title h1{
   color:#525252;
    padding-top:10px;
-   font-size:clamp(16px,3vw,30px);
+   font-size:clamp(20px,3vw,30px);
 }
 .content__title a{
   text-transform:uppercase; 
+  font-size:clamp(13px,3vw,15px);
+
   font-weight: bold; 
   align-self:flex-end;
    color:#4f7db9; 
